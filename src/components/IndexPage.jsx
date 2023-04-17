@@ -7,6 +7,7 @@ export default function IndexPage(){
 
     const fromChild = (childData) => {
         setData(childData);
+
     };
     
     return(

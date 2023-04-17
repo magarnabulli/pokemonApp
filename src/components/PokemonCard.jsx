@@ -4,25 +4,34 @@ import { useEffect } from "react";
 
 
 export default function PokemonCard (props){
-    const moves = Array.from(props.moves);
-    const stats= Array.from(props.stats);
-    console.log(pokemon);
-    return <>
+   
+    const stats = Array.from(props.stats);
+    return(     
+    <>
+    <article className="pokemon_card">
+        <Link to="/pokemon" props={props.data}>
     <p>{props.name}</p>
     <img id="sprite" src={props.sprite}></img>
-    {moves.map((x)=> {
-        return(
-            <ul>
-                <li>{x.move.name}</li>
-                </ul>
-            )
-    })}
+    {stats.map((x)=> {
+        if(stats.length != 0){
+            
+            return(
+                <ul>
+                    <li>{x.stat.base_value} {x.stat.name}</li>
+                    </ul>
+                )
+        }
+        })}
         {stats.map((stat)=> {
         return(
             <ul>
                 <li>{stat.base_stat} {stat.stat.name}</li>
                 </ul>
             )
-    })}
-</>
-}
+        })}
+
+        </Link>
+    </article>
+    </>
+    )
+} 

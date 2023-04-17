@@ -22,7 +22,7 @@ export default function SearchBar({ fromChild }) {
     const searchSubmit = (event) =>{
         event.preventDefault();
         getData();
-        fromChild(fetchResults)
+        fromChild(fetchResults);
     }
 
     return(

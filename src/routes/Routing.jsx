@@ -1,5 +1,5 @@
 import { createBrowserRouter} from "react-router-dom";
-import Root from "./Root";
+import Root from "../components/Root";
 import ErrorPage from "../ErrPage";
 import IndexPage from '../components/IndexPage';
 import PokemonPage from '../components/PokemonPage';

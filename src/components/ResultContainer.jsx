@@ -1,13 +1,15 @@
 import PokemonCard from "./PokemonCard";
 
 export default function ResultContainer(props){
-    const data = Array.from(props);
+
+    const data = props.data;
+    console.log(data);
     return(
         <section className="result_container">
             <div className="search_results_container">
-                {data.map((pokemon)=>{
-                    return <PokemonCard name={pokemon.name}></PokemonCard>
-                })}
+       
+        <PokemonCard name={data.name} stats={data.stats} moves={data.moves}></PokemonCard>
+            
             </div>
         </section>
     )
